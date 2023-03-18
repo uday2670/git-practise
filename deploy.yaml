@@ -3,3 +3,10 @@ apiversion: app/v1
  metadata: 
    name: nginx-deployment
    app: nginx
+    spec:
+    selector:
+      matchLabel:
+        app: nginx
+      replicas: 3
+      stratagy:
+        type: RollingUpdate
