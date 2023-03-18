@@ -9,4 +9,15 @@ apiversion: app/v1
         app: nginx
       replicas: 3
       stratagy:
-        type: RollingUpdate
+        type: RollingUpdat
+          mplate:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        -name: nginx
+         image: nginx
+         ports:
+           -containerpoet: 80
+         livenessprobe:e
